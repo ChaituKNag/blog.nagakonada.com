@@ -54,7 +54,7 @@ const IndexPage = () => {
             <div className="input-group mb-3">
               <input
                 type="search"
-                className="form-control rounded rounded-pill"
+                className="form-control rounded rounded-pill shadow-sm"
                 placeholder="Search topic"
                 aria-label="Search topic"
                 defaultValue={searchText}

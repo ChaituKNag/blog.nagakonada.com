@@ -8,8 +8,8 @@ const PostLayout = (props) => {
       <Header title={title} />
       <main className="post-body">
         <h1 className="display-5 mb-0 text-center">{title}</h1>
-        <div className="text-muted text-center mb-5">{date}</div>
-        <div className="py-5">{children}</div>
+        <div className="text-muted text-center mb-3">{date}</div>
+        <div className="py-3">{children}</div>
       </main>
     </div>
   );

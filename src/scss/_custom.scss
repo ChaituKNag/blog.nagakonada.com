@@ -43,7 +43,7 @@ body {
   }
 
   blockquote {
-    @extend .p-3, .my-4, .fs-5, .card, .shadow-sm;
+    @extend .p-3, .my-4, .card, .shadow-sm;
     p {
       margin: 0;
     }

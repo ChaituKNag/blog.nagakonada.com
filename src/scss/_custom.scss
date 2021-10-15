@@ -21,7 +21,31 @@
 @import "bootstrap/scss/utilities/api";
 @import "./utilities";
 
+$body-clr: #fef9ef;
+$text-clr: #555;
+
 html,
 body {
-  background-color: #f5f1ed;
+  background-color: $body-clr;
+  color: $text-clr;
+}
+
+.post-body {
+  max-width: 75ch;
+  margin: 0 auto;
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 1em;
+  }
+
+  blockquote {
+    @extend .p-3, .my-4, .fs-5, .card, .shadow-sm;
+    p {
+      margin: 0;
+    }
+  }
 }

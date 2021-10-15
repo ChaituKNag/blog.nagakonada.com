@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
-    title: "Naga Konada - Blogs",
+    siteUrl: "https://blog.nagakonada.com",
+    title: "Naga Konada - Blogs"
   },
   plugins: [
     "gatsby-plugin-sass",
@@ -11,27 +11,39 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.svg",
-      },
+        icon: "src/images/icon.svg"
+      }
     },
-    "gatsby-plugin-mdx",
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.md`, `.mdx`]
+      }
+    },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: "./src/images/",
+        path: "./src/images/"
       },
-      __key: "images",
+      __key: "images"
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "pages",
-        path: "./src/pages/",
+        path: "./src/pages/"
       },
-      __key: "pages",
+      __key: "pages"
     },
-  ],
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/posts/`
+      }
+    }
+  ]
 };

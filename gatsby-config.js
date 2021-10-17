@@ -17,7 +17,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
-        extensions: [`.md`, `.mdx`]
+        extensions: [`.md`, `.mdx`],
+        gatsbyRemarkPlugins: [`gatsby-remark-images`]
       }
     },
     "gatsby-plugin-sharp",

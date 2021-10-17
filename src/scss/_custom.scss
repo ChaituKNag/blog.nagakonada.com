@@ -28,6 +28,23 @@ html,
 body {
   background-color: $body-clr;
   color: $text-clr;
+
+  a {
+    text-decoration: none;
+  }
+
+  a:focus {
+    outline-color: $secondary;
+  }
+
+  hr {
+    @extend .my-5;
+    max-width: 100px;
+    margin: 0 auto;
+    height: 3px;
+    background-color: $secondary;
+    opacity: 1;
+  }
 }
 
 .post-body {
@@ -39,7 +56,8 @@ body {
   h4,
   h5,
   h6 {
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
+    margin-top: 1.5em;
   }
 
   blockquote {
@@ -47,5 +65,9 @@ body {
     p {
       margin: 0;
     }
+  }
+
+  img {
+    @extend .w-100;
   }
 }

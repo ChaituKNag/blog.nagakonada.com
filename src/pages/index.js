@@ -4,39 +4,6 @@ import Card from "../components/Card";
 import Hero from "../components/Hero";
 import DefaultLayout from "../components/layouts/default";
 
-// const posts = [
-//   {
-//     title: "Lorem, ipsum dolor.",
-//     description:
-//       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur cumque eos voluptatibus.",
-//     postId: 1
-//   },
-//   {
-//     title: "Repellat, quos quisquam!",
-//     description:
-//       "Atque facere aliquam fugiat accusantium illum magni beatae hic sunt repudiandae et!",
-//     postId: 2
-//   },
-//   {
-//     title: "Omnis, quisquam similique.",
-//     description:
-//       "Aliquid modi excepturi quasi adipisci! Labore error laborum voluptates perferendis distinctio eum?",
-//     postId: 3
-//   },
-//   {
-//     title: "Maiores, illo? Quibusdam.",
-//     description:
-//       "Ipsa hic quidem veniam sapiente? Id consequuntur laborum eos delectus ad dignissimos!",
-//     postId: 4
-//   },
-//   {
-//     title: "Assumenda, sunt officia!",
-//     description:
-//       "Accusantium fuga totam sunt inventore nisi, minima sed? Eos officiis quis ratione?",
-//     postId: 5
-//   }
-// ];
-
 const IndexPage = ({ data }) => {
   const posts = (data.allMdx.edges || []).map((item) => item.node);
   const [searchText, setSearchText] = useState("");
@@ -66,7 +33,7 @@ const IndexPage = ({ data }) => {
           </div>
         </div>
       </div>
-      <section className="row justify-content-center px-2 px-sm-0">
+      <section className="row justify-content-center px-2 my-2 my-md-5 px-sm-0">
         {filtered.length > 0 ? (
           filtered.map((post) => <Card key={post.id} post={post} />)
         ) : (

@@ -47,6 +47,11 @@ body {
   }
 }
 
+.default-root {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
 .post-body {
   max-width: 75ch;
   margin: 0 auto;

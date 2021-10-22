@@ -33,7 +33,7 @@ const IndexPage = ({ data }) => {
           </div>
         </div>
       </div>
-      <section className="row justify-content-center px-2 my-2 my-md-5 px-sm-0 col-12 col-lg-10 mx-auto">
+      <section className="px-2 my-2 my-md-5 px-sm-0 col-12 col-md-9 mx-auto grid">
         {filtered.length > 0 ? (
           filtered.map((post) => <Card key={post.id} post={post} />)
         ) : (

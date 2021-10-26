@@ -21,14 +21,9 @@
 @import "bootstrap/scss/utilities/api";
 @import "./utilities";
 
-$body-clr: #fef9ef;
-$text-clr: #555;
-
 html,
 body {
-  background-color: $body-clr;
-  color: $text-clr;
-
+  
   a {
     text-decoration: none;
   }
@@ -45,6 +40,16 @@ body {
     background-color: $secondary;
     opacity: 1;
   }
+
+  &::-webkit-scrollbar {
+    width: .5em;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: $gray-100;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $primary;
+  }
 }
 
 .default-root {
@@ -55,7 +60,7 @@ body {
 .post-body {
   max-width: 75ch;
   margin: 0 auto;
-  $line-height-base: 1.8;
+  line-height: 1.8;
 
   h2,
   h3,
@@ -74,6 +79,7 @@ body {
   }
 
   img {
-    @extend .w-100;
+    @extend .w-100, .rounded-3;
+    outline: 2px solid $secondary;
   }
 }

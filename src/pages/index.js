@@ -33,13 +33,16 @@ const IndexPage = ({ data }) => {
           </div>
         </div>
       </div>
-      <section className="px-2 my-2 my-md-5 px-sm-0 col-12 col-md-9 mx-auto grid">
-        {filtered.length > 0 ? (
-          filtered.map((post) => <Card key={post.id} post={post} />)
-        ) : (
-          <p className="text-center fs-5">Nothing to read, stay tuned!</p>
-        )}
-      </section>
+      {filtered.length > 0 && (
+        <section className="px-2 my-2 my-md-5 px-sm-0 col-12 col-md-9 mx-auto grid">
+          {filtered.map((post) => (
+            <Card key={post.id} post={post} />
+          ))}
+        </section>
+      )}
+      {filtered.length === 0 && (
+        <p className="text-center fs-5">Nothing to read, stay tuned!</p>
+      )}
     </DefaultLayout>
   );
 };

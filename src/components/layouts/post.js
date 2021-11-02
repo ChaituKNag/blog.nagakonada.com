@@ -11,7 +11,7 @@ const PostLayout = (props) => {
         <h1 className="display-5 mb-0 text-center">{title}</h1>
         <div className="text-muted text-center">{date}</div>
         <hr />
-        <div className="my-4">{children}</div>
+        <div className="my-4 px-2 px-sm-3 px-lg-0">{children}</div>
       </main>
       <Footer />
     </div>

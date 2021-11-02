@@ -34,7 +34,7 @@ const IndexPage = ({ data }) => {
         </div>
       </div>
       {filtered.length > 0 && (
-        <section className="px-2 my-2 my-md-5 px-sm-0 col-12 col-md-9 mx-auto grid">
+        <section className="post__cards px-2 my-2 my-md-5 px-lg-0 mx-auto grid">
           {filtered.map((post) => (
             <Card key={post.id} post={post} />
           ))}

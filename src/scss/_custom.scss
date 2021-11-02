@@ -57,6 +57,10 @@ body {
   overflow-y: auto;
 }
 
+.post__cards {
+  max-width: 100ch;
+}
+
 .post-body {
   max-width: 75ch;
   margin: 0 auto;
